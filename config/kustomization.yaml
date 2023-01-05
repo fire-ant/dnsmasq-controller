@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- crd/bases/dnsmasq.kvaps.cf_dhcphosts.yaml
+- crd/bases/dnsmasq.kvaps.cf_dhcpoptions.yaml
+- crd/bases/dnsmasq.kvaps.cf_dnshosts.yaml
+- crd/bases/dnsmasq.kvaps.cf_dnsmasqoptions.yaml
+- rbac/dhcphosts_editor_role.yaml
+- rbac/dhcphosts_viewer_role.yaml
+- rbac/dhcpoptions_editor_role.yaml
+- rbac/dhcpoptions_viewer_role.yaml
+- rbac/dnshosts_editor_role.yaml
+- rbac/dnshosts_viewer_role.yaml
+- rbac/dnsmasqoptions_editor_role.yaml
+- rbac/dnsmasqoptions_viewer_role.yaml
+- rbac/leader_election_role.yaml
+- rbac/leader_election_role_binding.yaml
+- rbac/role.yaml
+- rbac/role_binding.yaml
+- rbac/service_account.yaml
+- controller/dns-server.yaml
+- controller/dhcp-server.yaml
